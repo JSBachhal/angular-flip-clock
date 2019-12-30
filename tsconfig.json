@@ -17,7 +17,15 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "jsb-angular-flip-clock": [
+        "dist/jsb-angular-flip-clock"
+      ],
+      "jsb-angular-flip-clock/*": [
+        "dist/jsb-angular-flip-clock/*"
+      ]
+    }
   },
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,
