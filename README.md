@@ -16,7 +16,7 @@
 `npm i jsb-angular-flip-clock`
 
 ## Demo 
-[App Demo](https://stackblitz.com/github/JSBachhal/JSB-NumberCounter)
+[App Demo](https://stackblitz.com/github/JSBachhal/angular-flip-clock)
 
 ## API
 
