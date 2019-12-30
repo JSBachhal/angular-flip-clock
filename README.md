@@ -1,27 +1,111 @@
-# AngularFlipClock
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.20.
 
-## Development server
+# JSBAngularFlipClock
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+* A simple Number Counter Commponent to be used with Angular.
+* It is developed using `Angular >=8.0.0` and its newly introduced `ng g library` schematics.
+* This library is part of JSBNumberCounter project and it is generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.21.
+* Library location: `projects/jsb-angular-flip-clock` directory of this repository.
 
-## Code scaffolding
+## Examples/Demo
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+* A simple Example can be found under `src/app` directory of this repository.
 
-## Build
+## Installation
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+`npm i jsb-angular-flip-clock`
 
-## Running unit tests
+## Demo 
+[App Demo](https://stackblitz.com/github/JSBachhal/JSB-NumberCounter)
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## API
 
-## Running end-to-end tests
+`import { JSBAngularFlipClockModule } from 'jsb-angular-flip-clock'`<br>
+`selector: JSB-flipclock`
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+### @Inputs()
 
-## Further help
+| Input            | Type    | Required                   | Description                                                                                               |
+| ---------------- | ------- | -------------------------- | --------------------------------------------------------------------------------------------------------- |
+| HoursTensPlace       | number  | **YES**                    | the Number Data to be disaplayed.                                                                         |
+| HoursOnesPlace       | number  | **YES**                    | the Number Data to be disaplayed.                                                                         |
+| MinutesTensPlace       | number  | **YES**                    | the Number Data to be disaplayed.                                                                         |
+| MinutesOnesPlace       | number  | **YES**                    | the Number Data to be disaplayed.                                                                         |
+| SecondsTensPlace       | number  | **YES**                    | the Number Data to be disaplayed.                                                                         |
+| SecondsOnesPlace       | number  | **YES**                    | the Number Data to be disaplayed.         |
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+
+## Usage
+
+1) Register the `JSBNumCounterModule` in your app module.
+ > `import { JSBAngularFlipClockModule } from 'jsb-angular-flip-clock'`
+
+ ```typescript
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+
+import { AppRoutingModule } from './app-routing.module';
+import { AppComponent } from './app.component';
+import { JSBAngularFlipClockModule } from 'projects/jsb-angular-flip-clock/src/public-api';
+
+@NgModule({
+  declarations: [
+    AppComponent
+  ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    JSBAngularFlipClockModule
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }
+ ```
+
+ 2) Use the selector `(JSBNumCounter)` in your component.
+
+```typescript
+import { Component, OnInit } from '@angular/core';
+
+@Component({
+  selector: 'app-root',
+  template: `
+  <JSB-flipclock 
+
+
+[HoursTensPlace]='HoursTensPlace'
+[HoursOnesPlace]='HoursOnesPlace'
+[MinutesTensPlace]='MinutesTensPlace'
+[MinutesOnesPlace]='MinutesOnesPlace'
+[SecondsTensPlace]='SecondsTensPlace'
+[SecondsOnesPlace]='SecondsOnesPlace'
+
+></JSB-flipclock>`,
+  styleUrls: ['./app.component.scss']
+})
+export class AppComponent implements OnInit {
+  title = 'angular-flip-clock';
+  HoursTensPlace: number = 0;
+  HoursOnesPlace: number = 0;
+  MinutesTensPlace: number = 0;
+  MinutesOnesPlace: number = 0;
+  SecondsTensPlace: number = 0;
+  SecondsOnesPlace: number = 0;
+  ngOnInit() {
+
+    setInterval
+      (_ => {
+        this.HoursTensPlace=Math.floor(Math.random() * 9) + 1;
+        this.HoursOnesPlace=Math.floor(Math.random() * 9) + 1;
+        this.MinutesTensPlace=Math.floor(Math.random() * 9) + 1;
+        this.MinutesOnesPlace=Math.floor(Math.random() * 9) + 1;
+        this.SecondsTensPlace=Math.floor(Math.random() * 9) + 1;
+        this.SecondsOnesPlace=Math.floor(Math.random() * 9) + 1;
+
+      }, 1000);
+
+  }
+}
+```
+![Screenshot](https://github.com/JSBachhal/angular-flip-clock/blob/master/src/assets/screenshot.PNG?raw=true)

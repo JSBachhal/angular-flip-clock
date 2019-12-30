@@ -1,16 +1,16 @@
 {
   "name": "jsb-angular-flip-clock",
-  "version": "0.0.1",
-  "description": "A simple Number Counter Commponent to be used with Angular.",
+  "version": "0.0.2",
+  "description": "A simple Clock Commponent to be used with Angular.",
   "author": "JS Bachhal (Jassisngh11@gmail.com)",
   "repository": {
     "type": "git",
-    "url": "https://github.com/JSBDev/angular-flip-clock.git"
+    "url": "https://github.com/JSBachhal/angular-flip-clock.git"
   },
   "bugs": {
-    "url": "https://github.com/JSBDev/angular-flip-clock/issues"
+    "url": "https://github.com/JSBachhal/angular-flip-clock/issues"
   },
-  "homepage": "https://github.com/JSBDev/angular-flip-clock",
+  "homepage": "https://github.com/JSBachhal/angular-flip-clock",
   "keywords": [
     "angular",
     "javascript",

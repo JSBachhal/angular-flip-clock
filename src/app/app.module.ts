@@ -3,7 +3,9 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { JSBAngularFlipClockModule } from 'projects/jsb-angular-flip-clock/src/public-api';
+import { JSBAngularFlipClockModule } from 'jsb-angular-flip-clock/';
+
+
 
 @NgModule({
   declarations: [

@@ -108,4 +108,4 @@ export class AppComponent implements OnInit {
   }
 }
 ```
-![Screenshot](https://github.com/JSBDev/JSB-NumberCounter/blob/master/src/assets/screenshot.PNG?raw=true)
+![Screenshot](https://github.com/JSBachhal/angular-flip-clock/blob/master/src/assets/screenshot.PNG?raw=true)
